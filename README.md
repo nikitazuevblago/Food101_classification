@@ -15,8 +15,9 @@ This repo was created for personal educational purposes without a goal of implem
 git clone git@github.com:nikitazuevblago/Food101_classification.git
 cd Food101_classification
 pip install -r requirements.txt
+tensorboard --logdir=experiments
 ```
-**Final step**: open and run "modeling.ipynb"
+At the end of executing the commands in the terminal, you will be prompted to go to the local server to track the experiments obtained earlier after running **"modeling.ipynb"**
 
 (P.s. Training time - 14 min in Kaggle on P100 GPU)
 
