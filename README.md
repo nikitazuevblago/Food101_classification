@@ -12,8 +12,8 @@ This repo was created for personal educational purposes without a goal of implem
 
 ## Installation and Setup
 ```bash
-git clone https://yourproject.git
-cd yourproject
+git clone git@github.com:nikitazuevblago/Food101_classification.git
+cd Food101_classification
 pip install -r requirements.txt
 ```
 **Final step**: open and run "modeling.ipynb"
