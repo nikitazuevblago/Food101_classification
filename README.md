@@ -27,11 +27,8 @@ Tracked set of metrics with a possibility to filter them using regular expressio
 #### Example №1
 ![result_example_1.png](result_example_1.png)
 
-#### Example №1
+#### Example №2
 ![result_example_2.png](result_example_2.png)
 
 ## Possible problems:
 1. **Error while downloading model on MAC**: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>. <br /> **Solution**: https://stackoverflow.com/questions/68275857/urllib-error-urlerror-urlopen-error-ssl-certificate-verify-failed-certifica
-
-## License
-[nameofthelicense](linktothelicense)
