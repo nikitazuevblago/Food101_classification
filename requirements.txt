@@ -2,7 +2,6 @@
 
 # Packages installed with pip!
 torch==2.3.0
-pandas==2.2.2
 tensorboard==2.16.2
 torchvision==0.18.0
 kaggle==1.6.12

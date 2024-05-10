@@ -2,3 +2,5 @@ data/
 .venv/
 .vscode/
 .DS_Store
+models/
+.idea/
