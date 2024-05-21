@@ -7,3 +7,4 @@ torchvision==0.18.0
 kaggle==1.6.12
 scikit-learn==1.4.2
 gradio==4.31.4
+ipykernel==6.25.0

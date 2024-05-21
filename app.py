@@ -2,6 +2,7 @@ import gradio as gr
 import torch
 import torchvision
 from pathlib import Path
+import pickle
 
 
 def classify_image(img):
@@ -48,14 +49,19 @@ def classify_image(img):
                                             out_features=3, bias=True)
 
     ## Load pretrained weights
-    chkp_path = Path('models') / 'resnet18_BS100_DR50perc.pt'
+    chkp_path = 'models/resnet18_BS100_DR50perc.pt'
     model.load_state_dict(torch.load(chkp_path, map_location=torch.device('cpu')))
 
     # Make prediction
-    pred_label = torch.argmax(model(transformed_img)).item()
-    idx_to_class = {0: 'fried_calamari', 1: 'onion_rings', 2: 'tacos'}
-
+    model.eval()
+    with torch.inference_mode():
+      pred_label = torch.argmax(model(transformed_img)).item()
+    with open('class_to_idx.pkl', 'rb') as file:
+        class_to_idx = pickle.load(file)
+    idx_to_class = {v:k for k,v in class_to_idx.items()}
     return idx_to_class[pred_label]
 
-demo = gr.Interface(classify_image, inputs=gr.Image(type='pil'), outputs="text")
+
+demo = gr.Interface(classify_image, inputs=gr.Image(type='pil'), outputs="text", 
+                    description="Upload the picture of 'fried_calamari', 'onion_rings' or 'tacos'. The program will classify the image.", allow_flagging='never')
 demo.launch()
