@@ -56,12 +56,15 @@ def classify_image(img):
     model.eval()
     with torch.inference_mode():
       pred_label = torch.argmax(model(transformed_img)).item()
-    with open('class_to_idx.pkl', 'rb') as file:
-        class_to_idx = pickle.load(file)
+    
     idx_to_class = {v:k for k,v in class_to_idx.items()}
     return idx_to_class[pred_label]
 
 
+with open('class_to_idx.pkl', 'rb') as file:
+    class_to_idx = pickle.load(file)
+    food_types = list(class_to_idx.keys())
+
 demo = gr.Interface(classify_image, inputs=gr.Image(type='pil'), outputs="text", 
-                    description="Upload the picture of 'bibimbap', 'chocolate_cake' or 'takoyaki'. The program will classify the image.", allow_flagging='never')
+                    description=f"Upload the picture of one of these food types {food_types}. The program will classify the image.", allow_flagging='never')
 demo.launch()
