@@ -1,6 +1,6 @@
 ---
 title: Food Classifier
-emoji: 🚀
+emoji: 🎂
 colorFrom: blue
 colorTo: green
 sdk: gradio
