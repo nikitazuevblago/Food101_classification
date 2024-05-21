@@ -14,13 +14,17 @@ pinned: true
 
 ## Intro
 
-This repo was created for personal educational purposes without a goal of implementation. I used subset of [Food101](https://www.kaggle.com/datasets/dansbecker/food-101) dataset keeping only 3 types of food (targets) to classify. In the project were used different parameters and models to visualize enough experiments in TensorBoard.
+This repo was created for personal educational purposes. I used subset of [Food101](https://www.kaggle.com/datasets/dansbecker/food-101) dataset keeping only 3 types of food (targets) to classify. In the project were used different parameters and models to visualize enough experiments in TensorBoard. Also I used gradio and huggingface space as my hosting for the best model.
+
+## Deployment 
+[Click here](https://huggingface.co/spaces/blago7daren/Food101_classification) to see the app. <i>(P.s. Or run app.py to host it on your local machine)</i>
 
 ## Technologies Used
 
 - PyTorch
 - TensorBoard
 - Scikit-learn
+- Gradio
 
 ## Installation and Setup
 ```bash
