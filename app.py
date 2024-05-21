@@ -60,8 +60,10 @@ def classify_image(img):
         class_to_idx = pickle.load(file)
     idx_to_class = {v:k for k,v in class_to_idx.items()}
     return idx_to_class[pred_label]
-
+with open('class_to_idx.pkl', 'rb') as file:
+        class_to_idx = pickle.load(file)
+print(class_to_idx)
 
 demo = gr.Interface(classify_image, inputs=gr.Image(type='pil'), outputs="text", 
-                    description="Upload the picture of 'fried_calamari', 'onion_rings' or 'tacos'. The program will classify the image.", allow_flagging='never')
+                    description="Upload the picture of 'bibimbap', 'chocolate_cake' or 'takoyaki'. The program will classify the image.", allow_flagging='never')
 demo.launch()
