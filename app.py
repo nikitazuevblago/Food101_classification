@@ -1,8 +1,8 @@
 import gradio as gr
 import torch
 import torchvision
-from pathlib import Path
 import pickle
+from PIL import Image
 
 
 def classify_image(img):
@@ -65,6 +65,16 @@ with open('class_to_idx.pkl', 'rb') as file:
     class_to_idx = pickle.load(file)
     food_types = list(class_to_idx.keys())
 
+example_images = [
+    Image.open("clam chowder.jpeg"),
+    Image.open("donuts.jpg"),
+    Image.open("ice cream.jpeg")
+]
+
+#The examples parameter expects a list of lists
+examples = [[img] for img in example_images]
+
 demo = gr.Interface(classify_image, inputs=gr.Image(type='pil'), outputs="text", 
-                    description=f"Upload the picture of one of these food types {food_types}. The program will classify the image.", allow_flagging='never')
+                    description=f"Upload the picture of one of these food types {food_types}. The program will classify the image.", 
+                    allow_flagging='never', examples=examples)
 demo.launch()
