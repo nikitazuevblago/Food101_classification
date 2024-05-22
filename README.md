@@ -36,7 +36,7 @@ tensorboard --logdir=experiments
 ```
 At the end of executing the commands in the terminal, you will be prompted to go to the local server to track the experiments obtained earlier after running **"modeling.ipynb"**
 
-(P.s. Training time - 14 min in Kaggle on P100 GPU)
+(P.s. Training time - 11 min in Google Colab on T4 GPU)
 
 ## Result 
 Tracked set of metrics with a possibility to filter them using regular expressions.
