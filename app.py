@@ -3,6 +3,7 @@ import torch
 import torchvision
 import pickle
 from PIL import Image
+import os
 
 
 def classify_image(img):
@@ -66,9 +67,9 @@ with open('class_to_idx.pkl', 'rb') as file:
     food_types = list(class_to_idx.keys())
 
 example_images = [
-    Image.open("clam chowder.jpeg"),
-    Image.open("donuts.jpg"),
-    Image.open("ice cream.jpeg")
+    Image.open(os.path.join("examples_to_predict","clam chowder.jpeg")),
+    Image.open(os.path.join("examples_to_predict","donuts.jpg")),
+    Image.open(os.path.join("examples_to_predict","ice cream.jpeg"))
 ]
 
 #The examples parameter expects a list of lists

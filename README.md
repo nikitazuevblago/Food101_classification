@@ -43,10 +43,10 @@ Tracked set of metrics with a possibility to filter them using regular expressio
 (P.s. Regular expressions highlighted with red)
 
 #### Example №1
-![result_example_1.png](result_example_1.png)
+![result_example_1.png](result_imgs/result_example_2.png)
 
 #### Example №2
-![result_example_2.png](result_example_2.png)
+![result_example_2.png](result_imgs/result_example_2.png)
 
 ## File structure
 - **modeling.ipynb** - all experiment tracking process and modeling
