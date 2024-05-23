@@ -14,7 +14,7 @@ pinned: true
 
 ## Intro
 
-This repo was created for personal educational purposes. I used subset of [Food101](https://www.kaggle.com/datasets/dansbecker/food-101) dataset keeping only 3 types of food (targets) to classify. In the project were used different parameters and models to visualize enough experiments in TensorBoard. Also I used gradio and huggingface space as my hosting for the best model.
+This repo was created for personal educational purposes. I used subset of [Food101](https://www.kaggle.com/datasets/dansbecker/food-101) dataset keeping only 3 types of food (targets) to classify. In the project were used different parameters and models to visualize enough experiments in TensorBoard and pick the best with Optuna. Also I used gradio and huggingface space as my hosting for the best model.
 
 ## Deployment 
 [Click here](https://huggingface.co/spaces/blago7daren/Food101_classification) to see the app. <i>(P.s. Or run app.py to host it on your local machine)</i>
@@ -25,6 +25,7 @@ This repo was created for personal educational purposes. I used subset of [Food1
 - TensorBoard
 - Scikit-learn
 - Gradio
+- Optuna
 
 ## Installation and Setup (using "conda 24.1.2")
 ```bash
@@ -36,7 +37,7 @@ tensorboard --logdir=experiments
 ```
 At the end of executing the commands in the terminal, you will be prompted to go to the local server to track the experiments obtained earlier after running **"modeling.ipynb"**
 
-(P.s. Training time - 11 min in Google Colab on T4 GPU)
+(P.s. Training time - 1h 5min 42s on i7-9700k, RAM=32gb)
 
 ## Result 
 Tracked set of metrics with a possibility to filter them using regular expressions.

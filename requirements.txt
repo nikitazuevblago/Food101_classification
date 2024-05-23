@@ -2,9 +2,5 @@
 ## This file is for hosting on huggingface space because I couldn't figure out how to get dependencies from .yml in HF docker
 
 torch==2.3.0
-tensorboard==2.16.2
 torchvision==0.18.0
-kaggle==1.6.12
-scikit-learn==1.4.2
 gradio==4.31.4
-ipykernel==6.25.0
