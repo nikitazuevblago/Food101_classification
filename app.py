@@ -12,7 +12,7 @@ def classify_image(img):
     models = os.listdir('models/')
     assert len(models)==1, "More than 1 model in 'models/' folder!"
     model_name = models[0]
-    num_labels = len(os.listdir('data/'))
+    num_labels = 3
 
     if 'mobilenet_v3_small' in model_name:
         weights = torchvision.models.MobileNet_V3_Small_Weights.DEFAULT
