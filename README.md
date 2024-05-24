@@ -37,7 +37,7 @@ tensorboard --logdir=experiments
 ```
 At the end of executing the commands in the terminal, you will be prompted to go to the local server to track the experiments obtained earlier after running **"modeling.ipynb"**
 
-(P.s. Training time - 1h 5min 42s on i7-9700k, RAM=32gb)
+(P.s. Training time ≈ 1 hour on i7-9700k, RAM=32gb)
 
 ## Result 
 Tracked set of metrics with a possibility to filter them using regular expressions.
